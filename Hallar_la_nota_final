@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main() {
+float A, B, C, D; 
+    float E, F;       
+    float G, H;      
+      float I;         
+      cout << "Escribe la nota de tu primer parcial: ";
+       cin >> A;
+ cout << "Escribe la nota de tu segundo parcial: ";
+  cin >> B;
+  
+    cout << "Escribe la nota de tu tercer parcial: ";
+    cin >> C;
+    D = ((A + B + C) / 3) * 0.4;
+     cout << "Tu nota ponderada de parciales es: " << D << endl;
+      cout << "Ingresa la nota de tu examen final: ";
+       cin >> E;
+       F = E * 0.4;
+       cout << "La nota ponderada de tu examen final es: " << F << endl;
+       cout << "Ingresa la nota del proyecto final: ";
+         cin >> G;
+           H = G * 0.2;
+            cout << "La nota ponderada del proyecto es: " << H << endl;
+             I = D + F + H;
+               cout << "Tu nota final del semestre es: " << I << endl;
+                return 0;
+}
