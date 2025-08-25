@@ -1,0 +1,29 @@
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double A,B,C,X1,X2;
+    cout<<"Ingresar el primer valor: ";
+    cin>>A;
+    if (A!=0) {
+        cout<<"Ingrese el segundo valor: ";
+        cin>>B;
+        cout<<"Ingrese el tercer valor: ";
+        cin>>C;
+        if ((B*B-4*A*C)>0) {
+            X1=(-B+sqrt(B*B-4*A*C))/(2*A);
+            cout<<"El resultado de la primera raiz es: "<<X1<<endl;
+            X2=(-B-sqrt(B*B-4*A*C))/(2*A);
+            cout<<"El resultado de la segunda raiz es: "<<X2<<endl;
+        } else {
+            cout<<"Solucion no real";
+        }
+        
+    } else 
+        cout<<"Error sin solucion";
+    return 0;
+}
