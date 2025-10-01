@@ -1,0 +1,55 @@
+#include <iostream>
+#include "math.h"
+using namespace std;
+
+int main()
+{
+    int opcion;
+    double base, altura, area, lado,radio, PI = 3.1416;
+    do {
+	 cout << "Menu" << endl;
+	 cout << "1. Area del triangulo" << endl;
+	 cout << "2. Area del cuadrado" << endl;
+	 cout << "3. Area de la circunferencia" << endl;
+	 cout << "4. Area de un rectangulo" << endl; 
+	 cout << "Ingrese una opcion" << endl;
+	 cout << "0. Salir" << endl; 
+	 cin >> opcion; 
+     switch (opcion){
+		case 1:
+			cout << "Ingrese la base" << endl; 
+			cin >> base;
+			cout << "Ingresa la altura" << endl;
+			cin >> altura;
+			area = (base * altura) / 2;
+			cout << "El area del triangulo es: " << area << endl;
+			break;
+		case 2:
+			cout << "Ingrese el lado" << endl;
+			cin >> lado;
+			area = lado * lado; 
+			cout << "El area del cuadrado es: " << area << endl; 
+			break;
+		case 3 :
+			cout << "Ingrese el radio" << endl;
+			cin >> radio;
+			area = PI * radio * radio;
+			cout << "El area del circulo es: " << area << endl;
+			break; 
+		case 4 :
+			cout << "Ingrese la base" << endl;
+			cin >> base;
+			cout << "ingrese la altura" << endl;
+			cin >> altura;
+			area = base * altura; 
+			break;
+
+		case 0:
+			cout << "FIN" << endl;
+			break; 
+		default :
+			cout << "Error" << endl;
+	 }
+	} while (opcion != 0);
+		return 0;
+} 
