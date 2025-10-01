@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int A, B, C, E, F;
+    cout<<"ingrese el primer numero:";
+    cin>>A;
+    cout<<"Ingresar el segundo numero:";
+    cin>>B;
+    C=A+B;
+    cout<<"La suma es:"<<C<<endl;
+    C=A-B;
+    cout<<"La resta es:"<<C<<endl;
+    C=A*B;
+    cout<<"El resultado de la multiplicacion es:"<<C<<endl;
+    C=A/B;
+    cout<<"El resultado de la division es:"<<C<<endl;
+    return 0;
+}
