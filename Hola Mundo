@@ -1,0 +1,9 @@
+#include <iostream>
+
+using namespace std; // maneja la salida y la entrada standard
+int main() 
+{
+ std::cout << "Hola Mundo";
+
+    return 0;
+}
