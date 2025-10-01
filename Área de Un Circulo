@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+double P = 3.1416, radio, Area;
+    cout << "Ingrese el radio de la circunferencia: ";
+    cin>> radio;
+    Area = P * radio * radio;
+    cout<<"El àrea de la circunferencia es: " << Area;
+    return 0;
+}
