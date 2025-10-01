@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int H,M,S,R,E;
+	cout<<"Ingresa los segundos";
+	cin>>S;
+	H = S/3600;
+    R = S % 3600;
+	M = R/60;
+	E = R % 60;
+cout << S << " segundos son: "
+         << H << " horas, "
+         << M << " minutos y "
+         << E << " segundos." << endl;
+
+	return 0;
+}
