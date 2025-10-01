@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    double C, T, I, M, N;
+    cout<<"Ingrese el capital inicial:";
+    cin>>C;
+    cout<<"Ingrese la tasa de interes:";
+    cin>>T;
+    cout<<"Ingrese el numero de años:";
+    cin>>N;
+    M=C*pow((1+T), N);
+    I=M-C;
+    cout<<"El monto final es:"<<M<<endl;
+    cout<<"El interes compuesto ganado es:"<<I<<endl;
+
+    return 0;
+}
