@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float a, b, c, SF;
+    cout << "Ingrese el sueldo basico: " << endl;
+    cin >> a;
+    cout << "Ingrese el bono de transporte: " << endl;
+    cin >> b;
+    cout << "Ingrese la bonificacion por antiguedad: " << endl;
+    cin >> c;
+    SF = a + b + c;
+    cout << "Sueldo final: " << SF << endl;
+    return 0;
+}
