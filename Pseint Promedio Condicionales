@@ -1,0 +1,22 @@
+Algoritmo promedio_condicionales
+	Escribir "Ingresa el primer numero:"
+	Leer A
+	Si (0<=A)y(A<=10) Entonces
+		Escribir "Ingresa el segundo numero"
+		Leer B
+		Si (0<=B)y(B<=10) Entonces
+			Escribir "Ingresa el tercer numero"
+			Leer C
+			Si (0<=C)y(C<=10) Entonces
+				r <- (A+B+C)/3
+				Escribir "El resultado es: ", r
+			SiNo
+				Escribir "Error "  ,C  " no esta en el rango"
+			FinSi
+		SiNo
+			Escribir "Error "  ,B  " no esta en el rango"
+		FinSi
+	SiNo
+		Escribir "Error " ,A " no esta en el rango"
+	FinSi
+FinAlgoritmo
