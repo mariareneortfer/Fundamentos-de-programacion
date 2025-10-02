@@ -4,7 +4,7 @@ int main()
 {
     int opcion, cantidad;
     float suma=0, precio, ingreso;
-	do {
+	do { 
 		cout << "MENU" << endl;
 		cout << "1. Hamburguesa (3Bs)" << endl;
 		cout << "2. Hamburguesa con queso (5Bs)" << endl;
@@ -38,6 +38,4 @@ int main()
 	cout << "El monto total a pagar es: " << suma; 
 	return 0;
 }
-	cout << "El monto total a pagar es: " << suma; 
-	return 0;
-}
+
