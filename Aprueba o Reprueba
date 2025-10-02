@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   float nota;
+    cout << "Ingrese la nota del estudiante (sobre 100):";
+    cin >> nota;
+    if (nota >=51)
+    {
+        cout << "El estudiante APRUEBA la materia."<<endl;
+    else
+        cout<<"El estudiante REPRUEBA la materia."<< endl;
+      }
+    return 0;
+  }
