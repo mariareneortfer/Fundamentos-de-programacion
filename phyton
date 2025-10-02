@@ -1,0 +1,11 @@
+print("Cálculo del promedio de 5 números (usando solo 2 variables)")
+
+suma = 0  
+
+for i in range(1, 6): 
+    valor = int(input("Ingrese el valor : "))
+    suma += valor 
+
+promedio = suma / 5
+
+print("El promedio es:", promedio)
