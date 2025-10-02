@@ -1,9 +1,6 @@
 #include <iostream>
-
 using namespace std;
-
 int main()
-
 {
     int opcion, cantidad;
     float suma=0, precio, ingreso;
