@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N, digito, contador = 0;
+
+    cout << "Ingresa un numero entero positivo: ";
+    cin >> N;
+
+    int numero = N; 
+
+    if (N == 0) {
+    
+        contador = 1;
+    } else {
+        do {
+            digito = N % 10;
+
+            if (digito % 2 == 0) { 
+                contador++;
+            }
+
+            N /= 10; 
+        } while (N != 0);
+    }
+
+    cout << "El numero tiene " << contador << " digitos pares." << endl;
+
+    return 0;
+}
