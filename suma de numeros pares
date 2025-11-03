@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i, n, suma=0;
+    cout<<"Ingrese un numero: ";
+    cin>>n;
+    for(i=0; i<=n; i+=2){
+        suma=suma+i;
+    }
+    cout<<"La suma de los numeros pares del 1 al "<<n<<" es: "<<suma;
+    
+    return 0;
+}
