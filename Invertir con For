@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int cantidad, numero, invertido, digito;
+
+    do {
+        cout << "Ingrese la cantidad de numeros: ";
+        cin >> cantidad;
+    } while (cantidad <= 0);
+
+    for (int i = 1; i <= cantidad; i++) {
+
+        cout << "Ingrese el numero " << i << ": ";
+        cin >> numero;
+
+        int temp = numero;
+        invertido = 0;
+        while (temp > 0) {
+            digito = temp % 10;
+            invertido = invertido * 10 + digito;
+            temp /= 10;
+        }
+
+        cout << "El numero invertido de " << numero << " es: " << invertido << endl;
+    }
+
+    return 0;
+}
