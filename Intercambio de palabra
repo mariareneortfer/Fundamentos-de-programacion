@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void leerPalabras(string& p1, string& p2);
+void mostrarPalabras(const string& p1, const string& p2);
+void intercambiar(string& p1, string& p2);
+
+int main() {
+    string nombre1, nombre2;
+    leerPalabras(nombre1, nombre2);
+
+    cout << "Antes del intercambio:"<<endl;
+    mostrarPalabras(nombre1, nombre2);
+
+    intercambiar(nombre1, nombre2);
+
+    cout << "Despues del intercambio: "<<endl;
+    mostrarPalabras(nombre1, nombre2);
+
+    return 0;
+}
+
+void leerPalabras(string& p1, string& p2) {
+    cout << "Ingresa la primera palabra: ";
+    cin >> p1;
+    cout << "Ingresa la segunda palabra: ";
+    cin >> p2;
+}
+
+void mostrarPalabras(const string& p1, const string& p2) {
+    cout << "Palabra 1: " << p1 << endl;
+    cout << "Palabra 2: " << p2 << endl;
+}
+
+void intercambiar(string& p1, string& p2) {
+    swap(p1, p2);
+}
