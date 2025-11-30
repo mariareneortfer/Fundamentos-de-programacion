@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void crearFrase(string& frase);
+void crearPalabra(string& palabra);
+void buscar(const string& frase, const string& palabra, int& posicion);
+void mostrar(int posicion);
+
+int main() {
+    string frase, palabra;
+    int posicion;
+
+    crearFrase(frase);
+    crearPalabra(palabra);
+    buscar(frase, palabra, posicion);
+    mostrar(posicion);
+
+    return 0;
+}
+void crearFrase(string& frase) {
+    cout << "Ingrese una frase: ";
+    getline(cin, frase);
+}
+
+void crearPalabra(string& palabra) {
+    cout << "Ingrese la palabra que quiere buscar: ";
+    cin >> palabra;
+}
+
+void buscar(const string& frase, const string& palabra, int& posicion) {
+    posicion = frase.find(palabra);  
+}
+
+void mostrar(int posicion) {
+    if (posicion != -1) {
+        cout << "La palabra comienza en la posicion: "<< posicion << endl;
+    }
+    else {
+        cout << "La palabra no se encuentra en la frase." << endl;
+    }
+}
