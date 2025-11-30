@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int cantidad, numero, suma, digito;
+    do {
+        cout << "Ingrese la cantidad de numeros: ";
+        cin >> cantidad;
+    } while (cantidad <= 0);
+    for (int i = 1; i <= cantidad; i++) {
+        cout << "Ingrese el numero " << i << ": ";
+        cin >> numero;
+        int temp = numero;
+        suma = 0;
+        while (temp > 0) {
+            digito = temp % 10;
+            suma += digito;
+            temp /= 10;
+        }
+        cout << "La suma de los digitos de " << numero << " es: " << suma << endl;
+    }
+    return 0;
+}
