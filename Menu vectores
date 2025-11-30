@@ -1,0 +1,110 @@
+#include <iostream>
+#define MAX 100
+using namespace std;
+
+void cargar(int vec[], int n);
+void mostrar(int vec[], int n);
+double promedio(int vec[], int n);
+int Mmayor(int vec[], int n);
+int Mmenor(int vec[], int n);
+void esPrimo(int vec[], int n);
+
+
+int main()
+{
+    int tam, opcion, vector[MAX];
+    int n, digito, I = 0;
+    do {
+        cout << "Ingrese el tamano del vector: ";
+        cin >> tam;
+    } while ((tam < 0) || (tam > MAX));
+    do {
+        cout << "   Menu" << endl;
+        cout << "1. Cargar" << endl;
+        cout << "2. Mostar" << endl;
+        cout << "3. Invertir numero" << endl;
+        cout << "4. Numero primo" << endl;
+        cout << "5. Ventas" << endl;
+        cout << "0. Salir" << endl;
+        cout << "Ingrese una opcion: " << endl;
+        cin >> opcion;
+        switch (opcion) {
+        case 1:
+                cargar(vector, tam);
+                break;
+            case 2:
+                mostrar(vector, tam);
+                break;
+            case 3:
+                cout << "Ingrese un numero: ";
+                cin >> n;
+                while (n > 0) {
+                    digito = n % 10;
+                    I = I * 10 + digito;
+                    n /= 10;
+                }
+                cout << "El numero invertido es: " << I << endl;
+                break;
+            case 4: 
+                esPrimo(vector, tam);
+                break;
+            case 5:
+                cout << "Promedio general de ventas: " << promedio(vector, tam) << endl;
+                cout << "Monto mayor: " << Mmayor(vector, tam) << endl;
+                cout << "Monto menor: " << Mmenor(vector, tam) << endl;
+                break;
+            case 0:
+                cout << "Salir" << endl;
+                break;
+            default:
+                cout << "Error" << endl;
+        }
+    }while (opcion != 0);
+    return 0;
+}
+void cargar(int vec[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << "Vector[ " << i << " ]= ";
+        cin >> vec[i];
+    }
+}
+void mostrar(int vec[], int n) {
+    for (int i = 0; i < n; i++)
+        cout << "Vector[ " << i << " ]= " << vec[i] << endl;
+}
+int Mmayor(int vec[], int n) {
+    int mayor = vec[0];
+    for (int i = 1; i < n; i++)
+        if (vec[i] > mayor) {
+            mayor = vec[i];
+        }
+    return mayor;
+}
+int Mmenor(int vec[], int n) {
+    int menor = vec[0];
+    for (int i = 1; i < n; i++)
+        if (vec[i] < menor) {
+            menor = vec[i];
+        }
+    return menor;
+}
+double promedio(int vec[], int n) {
+    double p = 0;
+    for (int i = 0; i < n; i++)
+        p += vec[i];
+    return p / n;
+}
+void esPrimo(int vec[], int n) {
+    for (int i = 0; i < n; i++){
+        int num = vec[i];
+        int divisores = 0;
+        for (int j = 1; j <= num; j++) {
+            if (num % j == 0)
+                divisores++;
+        }
+    if (divisores == 2)
+        cout << num << "Es primo" << endl;
+    else
+        cout << num << "No es primo" << endl;
+    }
+}
