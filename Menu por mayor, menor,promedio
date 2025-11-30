@@ -1,0 +1,107 @@
+#include <iostream>
+#define MAX 100
+
+using namespace std;
+
+void cargar(int vector[], int n);
+void mostrar(int vector[], int n);
+float promedio(int vector[], int n);
+int eliminarDuplicados(int vector[], int n);
+int Mmayor(int vec[], int n);
+int Mmenor(int vec[], int n);
+
+int main()
+{
+	int tam, opcion, vector[MAX];
+	do {
+		cout << "Ingrese el tamano del vector: ";
+		cin >> tam;
+	} while ((tam <= 0) || (tam > MAX));
+	do {
+        cout << "   Menu" << endl;
+        cout << "1. Cargar" << endl;
+        cout << "2. Mostar" << endl;
+        cout << "3. Promedio" << endl;
+        cout << "4. Eliminar Duplicados" << endl;
+        cout << "5. Mayor y Menor" << endl;
+        cout << "0. Salir" << endl;
+        cout << "Ingrese una opcion: " << endl;
+        cin >> opcion;
+        switch (opcion) {
+        case 1:
+                cargar(vector, tam);
+                break;
+            case 2:
+                mostrar(vector, tam);
+                break;
+            case 3:
+				cout << "El promedio es: " << promedio(vector, tam) << endl;
+                break;
+            case 4: 
+                tam = eliminarDuplicados(vector, tam);
+                mostrar(vector, tam);
+                break;
+            case 5:
+                cout << "Monto mayor: " << Mmayor(vector, tam) << endl;
+                cout << "Monto menor: " << Mmenor(vector, tam) << endl;
+                break;
+            case 0:
+                cout << "Salir" << endl;
+                break;
+            default:
+                cout << "Error" << endl;
+        }
+    }while (opcion != 0);
+    return 0;
+}
+void cargar(int vector[], int n) {
+	for (int i = 0; i < n; i++)
+	{
+		cout << "vec[" << i << "]= ";
+		cin >> vector[i];
+	}
+}
+void mostrar(int vector[], int n) {
+	for (int i = 0; i < n; i++)
+		cout << "vec[" << i << "]= " << vector[i] << endl;
+}
+float promedio(int vector[], int n) {
+	float suma = 0;
+	for (int i = 0; i < n; i++)
+		suma = suma + vector[i];
+	return suma / n;
+}
+int eliminarDuplicados(int vector[], int n) {
+	if (n == 0) return 0;
+    int k = 0; 
+    for (int i = 0; i < n; i++) {
+        bool repetido = false;
+        for (int j = 0; j < k; j++) {
+            if (vector[i] == vector[j]) {
+                repetido = true;
+                break;
+            }
+        }
+        if (!repetido) {
+            vector[k] = vector[i];
+            k++;
+        }
+    }
+    return k;
+}
+int Mmayor(int vec[], int n) {
+    int mayor = vec[0];
+    for (int i = 1; i < n; i++)
+        if (vec[i] > mayor) {
+            mayor = vec[i];
+        }
+    return mayor;
+}
+int Mmenor(int vec[], int n) {
+    int menor = vec[0];
+    for (int i = 1; i < n; i++)
+        if (vec[i] < menor) {
+            menor = vec[i];
+        }
+    return menor;
+}
