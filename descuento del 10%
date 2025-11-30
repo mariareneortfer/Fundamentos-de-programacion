@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float descuento, total;
+    
+    do{
+        cout<<"Ingrese el total de su compra:";
+        cin>>total;
+        if(total<0)
+         cout<<"El total de su compra no puede ser un numero negativo. Intente de nuevo."<<endl;
+    }while(total<0);
+    
+    if(total<=300){
+        cout<<"El total de su compra es"<<total<<endl;
+    }
+    else{
+    descuento=total*0.90;
+    cout<<"Su total a pagar es "<<descuento<< " (se aplicò un descuento del 10%)";
+    }
+    return 0;
+}
